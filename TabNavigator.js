@@ -77,7 +77,7 @@ export default class TabNavigator extends React.Component {
 
       let { selected } = item.props;
       let scene =
-        <SceneContainer key={sceneKey}>
+        <SceneContainer key={sceneKey} selected={selected} style={sceneStyle}>
           {item}
         </SceneContainer>;
 
@@ -154,11 +154,7 @@ class SceneContainer extends React.Component {
         {...props}
         pointerEvents={selected ? 'auto' : 'none'}
         removeClippedSubviews={!selected}
-        style={[
-          styles.sceneContainer,
-          selected ? null : styles.hiddenSceneContainer,
-          props.style,
-        ]}>
+      >
         <StaticContainer shouldUpdate={selected}>
           {this.props.children}
         </StaticContainer>
