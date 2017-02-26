@@ -59,7 +59,7 @@ export default class Badge extends React.Component {
   }
 }
 
-let styles = StyleSheet.create({
+let styles = {
   container: {
     fontSize: 12,
     color: '#fff',
@@ -71,4 +71,4 @@ let styles = StyleSheet.create({
     borderRadius: 17 / 2,
     overflow: 'hidden',
   },
-});
+};

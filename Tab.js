@@ -79,7 +79,7 @@ export default class Tab extends React.Component {
   }
 }
 
-let styles = StyleSheet.create({
+let styles = {
   badge: {
     position: 'absolute',
     top: -6,
@@ -102,4 +102,4 @@ let styles = StyleSheet.create({
     marginTop: 4,
     marginBottom: 1 + Layout.pixel,
   },
-});
+};

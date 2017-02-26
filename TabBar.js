@@ -26,7 +26,7 @@ export default class TabBar extends React.Component {
   }
 }
 
-let styles = StyleSheet.create({
+let styles = {
   container: {
     backgroundColor: '#f8f8f8',
     flexDirection: 'row',
@@ -45,4 +45,4 @@ let styles = StyleSheet.create({
     right: 0,
     top: Platform.OS === 'android' ? 0 : -Layout.pixel,
   },
-});
+};

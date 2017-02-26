@@ -167,7 +167,7 @@ class SceneContainer extends React.Component {
   }
 }
 
-let styles = StyleSheet.create({
+let styles = {
   container: {
     flex: 1,
   },
@@ -189,6 +189,6 @@ let styles = StyleSheet.create({
   defaultSelectedIcon: {
     tintColor: 'rgb(0, 122, 255)',
   },
-});
+};
 
 TabNavigator.Item = TabNavigatorItem;
