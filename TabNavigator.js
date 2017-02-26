@@ -85,7 +85,7 @@ export default class TabNavigator extends React.Component {
     });
 
     return (
-      <View {...props} style={[styles.container, style]}>
+      <View {...props} style={[style]}>
         {scenes}
         <TabBar style={tabBarStyle} shadowStyle={tabBarShadowStyle}>
           {React.Children.map(children, this._renderTab)}
@@ -154,7 +154,11 @@ class SceneContainer extends React.Component {
         {...props}
         pointerEvents={selected ? 'auto' : 'none'}
         removeClippedSubviews={!selected}
-      >
+        style={[
+          styles.sceneContainer,
+          selected ? null : styles.hiddenSceneContainer,
+          props.style,
+        ]}>
         <StaticContainer shouldUpdate={selected}>
           {this.props.children}
         </StaticContainer>
@@ -163,7 +167,7 @@ class SceneContainer extends React.Component {
   }
 }
 
-let styles = {
+let styles = StyleSheet.create({
   container: {
     flex: 1,
   },
@@ -185,6 +189,6 @@ let styles = {
   defaultSelectedIcon: {
     tintColor: 'rgb(0, 122, 255)',
   },
-};
+});
 
 TabNavigator.Item = TabNavigatorItem;
