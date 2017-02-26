@@ -77,7 +77,7 @@ export default class TabNavigator extends React.Component {
 
       let { selected } = item.props;
       let scene =
-        <SceneContainer key={sceneKey} selected={selected} style={sceneStyle}>
+        <SceneContainer key={sceneKey} selected={selected}>
           {item}
         </SceneContainer>;
 
@@ -86,7 +86,7 @@ export default class TabNavigator extends React.Component {
 
     return (
       <View {...props} style={[styles.container, style]}>
-
+        {scenes}
         <TabBar style={tabBarStyle} shadowStyle={tabBarShadowStyle}>
           {React.Children.map(children, this._renderTab)}
         </TabBar>
