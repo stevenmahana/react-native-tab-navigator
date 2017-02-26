@@ -85,7 +85,12 @@ export default class TabNavigator extends React.Component {
     });
 
     return (
+      <View {...props} style={[styles.container, style]}>
 
+        <TabBar style={tabBarStyle} shadowStyle={tabBarShadowStyle}>
+          {React.Children.map(children, this._renderTab)}
+        </TabBar>
+      </View>
     );
   }
 
